@@ -1,0 +1,62 @@
+/* ---------------------- */
+/* Reset y variables base */
+/* ---------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;            /* evita desbordes a nivel de página */
+  background-color: #f8f9fa;   /* gris claro Bootstrap */
+  color: #212529;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* ---------------------- */
+/* Grid Layout de la app  */
+/* ---------------------- */
+.app-grid {
+  height: 100vh;
+  height: 100dvh; /* corrige viewport en móviles */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* Áreas del Grid */
+.app-header { grid-area: header; }
+.app-main   { grid-area: main;   }
+.app-footer { grid-area: footer; }
+
+/* El main hace scroll interno si el contenido crece */
+.app-main {
+  overflow: auto;
+  padding: 1rem 0; /* respiro vertical */
+}
+
+/* Evita desbordes horizontales en cualquier contenido */
+.app-main, .app-header, .app-footer {
+  min-width: 0;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estética extra (opcional) */
+.navbar-brand { font-weight: 600; }
+.nav-link.active { font-weight: 600; }
