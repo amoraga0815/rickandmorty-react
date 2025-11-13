@@ -41,10 +41,10 @@ export default function Header() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/products"
+                  to="/personajes"
                   className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
                 >
-                  Productos
+                  Personajes
                 </NavLink>
               </li>
             </ul>

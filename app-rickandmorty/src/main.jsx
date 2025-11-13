@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-
+import Prueba from './prueba.jsx'
 
 
 // Bootstrap (CSS + JS para navbar colapsable)
