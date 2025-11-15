@@ -33,7 +33,7 @@ export default function Header() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/about"
+                  to="/PageAbout"
                   className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
                 >
                   Acerca de
@@ -41,10 +41,10 @@ export default function Header() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/personajes"
+                  to="/PageContainer"
                   className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
                 >
-                  Personajes
+                  Contenido
                 </NavLink>
               </li>
             </ul>

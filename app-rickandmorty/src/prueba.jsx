@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import {CharacterMenu} from './components/CharacterMenu.jsx';
-import {CharacterCard} from './components/Card/CharacterCard.jsx';
+import {ListMenu} from './components/ListMenu.jsx';
+import {CardResult} from './components/Card/CardResult.jsx';
 
 function Prueba() {
   
@@ -21,7 +21,7 @@ const [characters, setCharacters] = useState([]);
         {/* Zona azul */}
         <Col md={4}>
           {selectedCharacter && (
-            <CharacterCard
+            <CardResult
               image={selectedCharacter.image}
               name={selectedCharacter.name}
               species={selectedCharacter.species}
@@ -33,7 +33,7 @@ const [characters, setCharacters] = useState([]);
 
         {/* Zona roja */}
         <Col md={4}>
-          <CharacterMenu
+          <ListMenu
             characters={characters}
             onSelect={(char) => setSelectedCharacter(char)}
           />
