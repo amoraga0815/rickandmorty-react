@@ -8,22 +8,19 @@ export default function SectionEpisodes() {
   const [selectedEpisode, setSelectedEpisode] = useState(null);
   const [episodeCharacters, setEpisodeCharacters] = useState([]);
 
-  // Cargar todos los episodios al inicio
   useEffect(() => {
     fetch("https://rickandmortyapi.com/api/episode")
       .then((res) => res.json())
       .then((data) => setEpisodes(data.results));
   }, []);
 
-  // Cuando se selecciona un episodio
   const handleSelectEpisode = (episode) => {
     setSelectedEpisode(episode);
-    setEpisodeCharacters([]); // limpiar mientras tanto
+    setEpisodeCharacters([]); 
 
-    // episode.characters es un arreglo de URLs de personajes
     const urls = episode.characters;
 
-    // Hacemos fetch de cada URL y luego guardamos todos los personajes
+
     const requests = urls.map((url) =>
       fetch(url).then((res) => res.json())
     );
@@ -35,15 +32,13 @@ export default function SectionEpisodes() {
 
   return (
     <Row className="mt-3">
-      {/* Columna izquierda: lista de episodios */}
       <Col md={4}>
         <ListMenu
-          OptionsMenu={Episodes}          // si tu ListMenu espera OptionsMenu
+          OptionsMenu={Episodes}          
           onSelect={handleSelectEpisode}
         />
       </Col>
 
-      {/* Columna derecha: info del episodio y personajes */}
       <Col md={8}>
         {selectedEpisode && (
           <>

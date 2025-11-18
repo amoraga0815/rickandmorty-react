@@ -5,7 +5,6 @@ export default function PageContainer() {
   return (
     <Container fluid className="p-4">
 
-      {/* Tabs como rutas */}
       <Nav variant="tabs" defaultActiveKey="/PageContainer">
         <Nav.Item>
           <NavLink
@@ -42,7 +41,6 @@ export default function PageContainer() {
         </Nav.Item>
       </Nav>
 
-      {/* Aquí se renderiza el contenido de cada Tab */}
       <Outlet />
     </Container>
   );

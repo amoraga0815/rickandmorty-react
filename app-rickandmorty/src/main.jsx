@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom'
 import Prueba from './prueba.jsx'
 
 
-// Bootstrap (CSS + JS para navbar colapsable)
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
